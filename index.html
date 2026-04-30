@@ -139,11 +139,6 @@
             align-items: flex-start;
             border-left: 5px solid #fbbf24;
         }
-        .username-guide i {
-            font-size: 22px;
-            color: #fbbf24;
-            margin-top: 2px;
-        }
         .btn-create {
             background: linear-gradient(105deg, #fbbf24, #f59e0b);
             width: 100%;
@@ -164,48 +159,15 @@
             margin-top: 12px;
             font-weight: 600;
         }
-        .suggestion-card {
-            background: rgba(251, 191, 36, 0.15);
-            border-radius: 1.5rem;
-            padding: 14px;
-            margin: 16px 0 12px;
-            border: 1px dashed #fbbf24;
-            cursor: pointer;
-            transition: all 0.15s ease;
-        }
-        .suggestion-card:hover {
-            background: rgba(251, 191, 36, 0.3);
-            transform: scale(0.99);
-        }
-        .suggestion-label {
-            font-size: 11px;
-            letter-spacing: 1px;
-            color: #fbbf24;
-            margin-bottom: 6px;
-        }
-        .suggestion-name {
-            font-size: 1.3rem;
-            font-weight: bold;
-            font-family: monospace;
-            word-break: break-all;
-        }
-        .or-divider {
-            display: flex;
-            align-items: center;
-            margin: 18px 0;
-            color: #5b6e8c;
+        .admin-reset-msg {
+            background: #7c2d12;
+            color: #fed7aa;
+            padding: 8px;
+            border-radius: 30px;
             font-size: 12px;
+            margin-top: 12px;
         }
-        .or-divider::before, .or-divider::after {
-            content: "";
-            flex: 1;
-            height: 1px;
-            background: #334155;
-        }
-        .or-divider::before { margin-right: 12px; }
-        .or-divider::after { margin-left: 12px; }
 
-        /* Cards & components */
         .card {
             background: rgba(18, 25, 45, 0.7);
             backdrop-filter: blur(12px);
@@ -213,7 +175,6 @@
             padding: 1.5rem;
             border: 1px solid rgba(251, 191, 36, 0.25);
             box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4);
-            transition: transform 0.2s ease;
         }
 
         .btn-premium {
@@ -248,7 +209,6 @@
             flex: 1;
             margin: 0 6px;
         }
-        .stat-box small { font-size: 11px; opacity: 0.7; letter-spacing: 0.5px; }
         .stat-box div { font-weight: 800; font-size: 1.4rem; color: #fbbf24; text-shadow: 0 0 5px #ffb347; }
 
         .bottom-nav {
@@ -265,7 +225,6 @@
             padding: 8px 6px;
             border-radius: 60px;
             border: 1px solid rgba(251, 191, 36, 0.5);
-            box-shadow: 0 20px 35px -10px black;
             z-index: 100;
         }
         .nav-item {
@@ -277,14 +236,9 @@
             cursor: pointer;
             padding: 6px 0;
             border-radius: 40px;
-            transition: 0.1s;
         }
         .nav-item i { font-size: 22px; display: block; margin-bottom: 4px; }
-        .nav-item.active { background: rgba(251, 191, 36, 0.2); color: #fbbf24; text-shadow: 0 0 3px gold; }
-
-        .prize-tag { font-size: 10px; padding: 4px 10px; border-radius: 20px; font-weight: 800; }
-        .tag-win { background: linear-gradient(145deg, #059669, #047857); color: white; box-shadow: 0 2px 6px #0a5c3e; }
-        .tag-lock { background: #1e293b; color: #94a3b8; border: 1px dashed #fbbf24; }
+        .nav-item.active { background: rgba(251, 191, 36, 0.2); color: #fbbf24; }
 
         .leader-item {
             background: rgba(15, 23, 42, 0.6);
@@ -293,14 +247,9 @@
             border-radius: 60px;
             backdrop-filter: blur(4px);
             border: 1px solid #334155;
-            transition: 0.1s;
         }
-        .m-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0 8px;
-        }
-        .m-table th { color: #fbbf24; font-weight: 700; font-size: 12px; padding-bottom: 6px; }
+        .m-table { width: 100%; border-collapse: separate; border-spacing: 0 8px; }
+        .m-table th { color: #fbbf24; font-size: 12px; padding-bottom: 6px; }
         .m-table td { padding: 12px 4px; background: #0f172a80; border-radius: 18px; }
 
         .gift-card {
@@ -310,11 +259,8 @@
             padding: 20px;
             text-align: center;
             border: 1px solid #fbbf24;
-            box-shadow: 0 6px 14px black;
             cursor: pointer;
-            transition: transform 0.1s ease, background 0.2s;
         }
-        .gift-card:active { transform: scale(0.98); background: linear-gradient(135deg, #047857, #064e3b); }
         .code-block {
             font-size: 22px;
             font-family: monospace;
@@ -328,8 +274,6 @@
             align-items: center;
             justify-content: center;
             gap: 12px;
-            user-select: all;
-            backdrop-filter: blur(4px);
         }
         .copy-toast {
             position: fixed;
@@ -342,8 +286,6 @@
             padding: 8px 20px;
             border-radius: 60px;
             z-index: 3000;
-            font-size: 14px;
-            box-shadow: 0 4px 12px black;
             animation: fadeToast 1.5s ease forwards;
             pointer-events: none;
         }
@@ -354,14 +296,7 @@
             100% { opacity: 0; transform: translateX(-50%) translateY(-15px); }
         }
         .hidden { display: none; }
-        .active-milestone {
-            background: linear-gradient(115deg, #fbbf2410, #1e293b);
-            border-radius: 30px;
-            padding: 14px;
-            border-left: 4px solid #fbbf24;
-        }
-
-        /* Fullscreen Game Page Overlay */
+        
         .game-fullscreen {
             position: fixed;
             top: 0;
@@ -375,7 +310,6 @@
             justify-content: center;
             align-items: center;
             backdrop-filter: blur(16px);
-            transition: all 0.2s;
             padding: 20px;
         }
         .game-fullscreen .game-card {
@@ -385,114 +319,123 @@
             max-width: 500px;
             padding: 2rem 1.5rem;
             border: 2px solid #fbbf24;
-            box-shadow: 0 30px 40px black;
             text-align: center;
         }
-        .game-fullscreen .stat-row {
+        .apple-big { font-size: 140px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)); margin: 15px 0; }
+        .close-game-btn { background: #dc2626; border: none; padding: 12px; border-radius: 60px; color: white; font-weight: bold; margin-top: 20px; width: 100%; cursor: pointer; }
+
+        /* ADMIN PANEL STYLES */
+        .admin-panel {
+            margin-bottom: 20px;
+            border-top: 2px solid #fbbf24;
+            padding-top: 16px;
+        }
+        .admin-card {
+            background: #1e1b2ecc;
+            border-radius: 2rem;
+            padding: 1rem;
+            margin-bottom: 20px;
+        }
+        .admin-input-group {
+            display: flex;
+            gap: 8px;
+            margin: 12px 0;
+            flex-wrap: wrap;
+        }
+        .admin-input-group input {
+            flex: 1;
+            background: #0a0f1e;
+            border: 1px solid #fbbf24;
+            border-radius: 60px;
+            padding: 12px;
+            color: white;
+        }
+        .btn-danger {
+            background: #b91c1c;
+            box-shadow: none;
+            color: white;
+        }
+        .user-list-item {
+            background: #0f172a;
+            border-radius: 40px;
+            padding: 8px 12px;
+            margin: 6px 0;
             display: flex;
             justify-content: space-between;
-            margin: 20px 0;
-            gap: 12px;
+            align-items: center;
         }
-        .game-fullscreen .apple-big {
-            font-size: 140px;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
-            margin: 15px 0;
-            transition: transform 0.08s;
-        }
-        .close-game-btn {
-            background: #dc2626;
-            border: none;
-            padding: 12px;
-            border-radius: 60px;
-            color: white;
-            font-weight: bold;
-            margin-top: 20px;
-            width: 100%;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        .score-highlight {
-            font-size: 2.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #fbbf24, #f97316);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-    </style>   
+    </style>
 </head>
 <body>
 
 <div id="statusBanner"><i class="fas fa-skull-crosswalk"></i> SESSION LOCKED – COME BACK DURING OPEN HOURS </div>    
 
-<!-- USERNAME PERMANENT SCREEN (One device forever locked) -->
+<!-- USERNAME SCREEN -->
 <div id="usernameScreen">
     <div class="username-card">
         <i class="fas fa-user-astronaut" style="font-size: 48px; color: #fbbf24;"></i>
         <h2>APPLE SLASHER</h2>
-                        <p style="font-size: 13px; margin-bottom: 6px;">Create your username for apple Slasher game </p>
+        <p style="font-size: 13px; margin-bottom: 6px;">Create your username for Apple Slasher game</p>
         <div id="suggestionBox" style="display: none;"></div>
         <div class="username-guide">
             <i class="fas fa-lock"></i>
-            <div><strong>Username Type : @USER_1234</strong><br>
-            • Start with <strong>@</strong> symbol<br>
-            • Letters, numbers, underscore<br>
-            • Example: <code style="background:#00000060; padding:2px 6px; border-radius:12px;">@john_123</code><br>
-            • Min 5, Max 20 characters<br>
-            • <span style="color:#fbbf24;">Once created PERMANENT</span></div>
+            <div><strong>Username Type : @rudra_108</strong><br>• Start with <strong>@</strong> symbol<br>• Example: <code>@john_123</code><br>• Min 5, Max 20 characters</div>
         </div>
         <input type="text" id="newUsernameInput" placeholder="@your_unique_id" autocomplete="off" maxlength="20">
         <div id="usernameError" class="error-msg"></div>
         <button id="createUsernameBtn" class="btn-create"><i class="fas fa-feather-alt"></i> CREATE </button>
-        <p style="font-size: 10px; margin-top: 16px; opacity:0.6;"><i class="fas fa-link"></i>Hello users welcome to RUDRA easy to win application</p>
+        <div id="adminResetNotification" class="admin-reset-msg" style="display: none;"></div>
     </div>
 </div>
 
-<!-- MAIN APP AFTER LOGIN -->
+<!-- MAIN APP -->
 <div id="mainApp" class="container">
     <section id="sec-click" class="tab-content">
-        <div class="card" style="position: relative;">
-            <p style="font-size: 10px; margin-top: 8px; text-align: right;"><i class="far fa-clock"></i> Session: <span id="openTimeText">--</span> - <span id="closeTimeText">--</span></p>
+        <div class="card">
+            <p style="font-size: 10px; text-align: right;">Session: <span id="openTimeText">--</span> - <span id="closeTimeText">--</span></p>
             <h3 style="color:#FBBF24; text-align: center;"><i class="fas fa-cut"></i> APPLE SLASHER</h3>
-            <div style="display: flex; justify-content: space-between; margin: 20px 0 10px;">
+            <div style="display: flex; margin: 20px 0 10px;">
                 <div class="stat-box"><small>⚔️ USERNAME</small><div id="myUID" style="font-size:13px;">--</div></div>
                 <div class="stat-box"><small>🏆 HIGH SCORE</small><div id="myBest">0</div></div>
             </div>
-            <button id="startFullGameBtn" class="btn-premium"><i class="fas fa-play"></i> START </button>
-            <div style="margin-top: 25px; text-align: center; background: #1e293b30; border-radius: 30px; padding: 10px;">
-                <i class="fas fa-mobile-alt"></i> APPLE SLASHER 🍎| Beat your best
+            <button id="startFullGameBtn" class="btn-premium"><i class="fas fa-play"></i> START GAME</button>
+            
+            <!-- ADMIN PANEL (hidden by default, appears for admin) -->
+            <div id="adminPanelSection" class="admin-panel hidden">
+                <div class="admin-card">
+                    <h4 style="color:#fbbf24;"><i class="fas fa-shield-alt"></i> ADMIN CONTROL</h4>
+                    <p style="font-size: 12px;">Remove any user → Device can recreate username</p>
+                    <div class="admin-input-group">
+                        <input type="text" id="adminRemoveUsername" placeholder="Enter username to remove (e.g., @john_123)">
+                        <button id="adminRemoveUserBtn" class="btn-premium btn-danger" style="padding: 12px 16px;">REMOVE USER</button>
+                    </div>
+                    <div id="adminUserList" style="max-height: 200px; overflow-y: auto; margin-top: 12px;"></div>
+                    <button id="adminRefreshListBtn" class="btn-premium" style="background:#334155; margin-top: 8px;"><i class="fas fa-sync-alt"></i> Refresh Users</button>
+                </div>
             </div>
+            <div style="margin-top: 15px; text-align: center; font-size: 11px;">🍎 Slash apples beat highscore</div>
         </div>
     </section>
 
     <section id="sec-milestone" class="tab-content hidden">
         <div class="card">
-            <h3 style="color: #FBBF24;"><i class="fas fa-chart-line"></i> TARGET USER  & PRIZE </h3>
+            <h3 style="color: #FBBF24;"><i class="fas fa-chart-line"></i> TARGET & PRIZE</h3>
             <div id="currentStatus" class="active-milestone" style="margin-bottom: 20px;">🏅 Loading milestones...</div>
-            <div style="overflow-x: auto;">
-                <table class="m-table">
-                    <thead><tr><th>👥 TARGET USERS 🎯</th><th>🏅 WINNERS 🏆</th><th>💰 REWARD (₹)</th></tr></thead>
-                    <tbody id="milestoneBody"></tbody>
-                </table>
-            </div>
+            <table class="m-table"><thead><tr><th>👥 TARGET USERS</th><th>🏅 WINNERS</th><th>💰 REWARD (₹)</th></tr></thead><tbody id="milestoneBody"></tbody></table>
         </div>
     </section>
 
     <section id="sec-leader" class="tab-content hidden">
         <div class="card">
             <h3 style="color:#FBBF24; text-align: center;">🌍 GLOBAL RANKINGS</h3>
-            <div style="background:#111b29; display: inline-block; width: auto; margin: 10px auto; padding: 6px 16px; border-radius: 50px;">
-                <i class="fas fa-users"></i> Total Users: <span id="totalUserCount" style="font-weight:800;">0</span>
-            </div>
-            <div id="leaderList" style="max-height: 430px; overflow-y: auto; margin-top: 8px;"></div>
+            <div style="background:#111b29; width: auto; margin: 10px auto; padding: 6px 16px; border-radius: 50px; text-align:center;">Total Users: <span id="totalUserCount" style="font-weight:800;">0</span></div>
+            <div id="leaderList" style="max-height: 430px; overflow-y: auto;"></div>
         </div>
     </section>
 
     <section id="sec-gift" class="tab-content hidden">
         <div class="card">
             <h3 style="color:#4ADE80;"><i class="fas fa-gift"></i> MY REWARDS</h3>
-            <p style="font-size: 11px; opacity: 0.7;"><i class="fas fa-mouse-pointer"></i> Click any gift card → instantly copy code</p>
             <div id="giftContainer"></div>
         </div>
     </section>
@@ -507,7 +450,7 @@
 
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { getDatabase, ref, onValue, get, set, update } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+    import { getDatabase, ref, onValue, get, set, update, remove } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
     const firebaseConfig = {
         apiKey: "AIzaSyDnM9ry5JreqjRXqQVUSiaBzudXuaAF-QI",
@@ -516,15 +459,13 @@
     const app = initializeApp(firebaseConfig);
     const db = getDatabase(app);
     
-    // --- PERMANENT USERNAME & DEVICE LOCK (no cross-device) ---
     let CURRENT_USERNAME = null;
+    let ADMIN_SETTINGS = { gameDuration: 15, showLimit: 200, winAmount: 10, milestones: {100:{wins:10,price:50},250:{wins:20,price:150},500:{wins:40,price:300}}, openTime: "00:00", closeTime: "23:59" };
+    let ADMIN_CREDENTIAL = "admin@apple123"; // simple admin key (user can type to activate)
     
     function getDeviceFingerprint() {
         let fp = localStorage.getItem("device_fingerprint");
-        if (!fp) {
-            fp = "DEV_" + Math.random().toString(36).substring(2, 15) + Date.now().toString(36);
-            localStorage.setItem("device_fingerprint", fp);
-        }
+        if (!fp) { fp = "DEV_" + Math.random().toString(36).substring(2, 15) + Date.now().toString(36); localStorage.setItem("device_fingerprint", fp); }
         return fp;
     }
     const deviceId = getDeviceFingerprint();
@@ -532,33 +473,7 @@
     async function fetchDeviceBoundUsername() {
         const bindingRef = ref(db, `deviceBindings/${deviceId}`);
         const snap = await get(bindingRef);
-        if (snap.exists() && snap.val().username) return snap.val().username;
-        return null;
-    }
-    
-    async function showDeviceSuggestion() {
-        const boundUsername = await fetchDeviceBoundUsername();
-        const suggestionBox = document.getElementById('suggestionBox');
-        const orDivider = document.getElementById('orDivider');
-        if (boundUsername && boundUsername !== CURRENT_USERNAME) {
-            suggestionBox.style.display = 'block';
-            orDivider.style.display = 'flex';
-            suggestionBox.innerHTML = `
-                <div class="suggestion-card" id="suggestionLoginBtn">
-                    <div class="suggestion-label"><i class="fas fa-mobile-alt"></i> 🔄 DEVICE DETECTED</div>
-                    <div class="suggestion-name">${boundUsername}</div>
-                    <div style="font-size: 11px; margin-top: 8px; opacity:0.8;">⬅️ Click to login with this ID (permanent)</div>
-                </div>
-            `;
-            const suggBtn = document.getElementById('suggestionLoginBtn');
-            if (suggBtn) suggBtn.onclick = async () => {
-                const isValid = await validateAndActivateUsername(boundUsername);
-                if (isValid) {
-                    document.getElementById('usernameScreen').style.display = 'none';
-                    initAppAfterAuth(CURRENT_USERNAME);
-                } else setUsernameError("⚠️ Failed to recover.");
-            };
-        } else { suggestionBox.style.display = 'none'; orDivider.style.display = 'none'; }
+        return snap.exists() ? snap.val().username : null;
     }
     
     async function validateAndActivateUsername(username) {
@@ -590,13 +505,59 @@
         const trimmed = input.trim();
         if (!trimmed.startsWith('@')) return false;
         if (trimmed.length < 5 || trimmed.length > 20) return false;
-        return /^@[a-zA-Z0-9_]+$/.test(trimmed);
+        return /^@[a-z0-9_]+$/.test(trimmed);
     }
     
     function setUsernameError(msg) {
         const errDiv = document.getElementById('usernameError');
         errDiv.innerText = msg;
         setTimeout(() => { if(errDiv) errDiv.innerText = ''; }, 3500);
+    }
+    
+    // ADMIN: REMOVE USER COMPLETELY (allow recreation)
+    async function adminRemoveUser(usernameToRemove) {
+        if (!usernameToRemove || usernameToRemove.trim() === "") return alert("Enter username");
+        const cleanName = usernameToRemove.trim();
+        const lowerKey = cleanName.toLowerCase();
+        // Check if exists
+        const userRef = ref(db, `usernames/${lowerKey}`);
+        const userSnap = await get(userRef);
+        if (!userSnap.exists()) return alert(`User ${cleanName} not found`);
+        const deviceIdBound = userSnap.val().deviceId;
+        // Remove from usernames
+        await remove(userRef);
+        // Remove leaderboard entry
+        await remove(ref(db, `leaderboard/${lowerKey}`));
+        // Remove device binding
+        if (deviceIdBound) await remove(ref(db, `deviceBindings/${deviceIdBound}`));
+        // Remove gifts data if any
+        await remove(ref(db, `gifts/${cleanName}`));
+        // Remove logs
+        await remove(ref(db, `userLogs/${cleanName}`));
+        alert(`✅ User ${cleanName} removed successfully. Their device can now create a new username.`);
+        // Refresh admin list
+        await loadAllUsersForAdmin();
+    }
+    
+    async function loadAllUsersForAdmin() {
+        const usernamesSnap = await get(ref(db, 'usernames'));
+        if (!usernamesSnap.exists()) { document.getElementById('adminUserList').innerHTML = "<div>No users</div>"; return; }
+        const users = Object.values(usernamesSnap.val());
+        const listHtml = users.map(u => `<div class="user-list-item"><span><i class="fas fa-user"></i> ${u.username}</span><button class="admin-delete-mini" data-name="${u.username}" style="background:#b91c1c; border:none; padding:4px 12px; border-radius:60px; color:white;">Remove</button></div>`).join('');
+        document.getElementById('adminUserList').innerHTML = listHtml;
+        document.querySelectorAll('.admin-delete-mini').forEach(btn => {
+            btn.addEventListener('click', () => adminRemoveUser(btn.getAttribute('data-name')));
+        });
+    }
+    
+    // Check if current user is admin (by clicking secret with pass)
+    function promptAdminLogin() {
+        const pwd = prompt("🔐 ADMIN ACCESS: Enter admin key:");
+        if (pwd === "admin@apple123") {
+            document.getElementById('adminPanelSection').classList.remove('hidden');
+            loadAllUsersForAdmin();
+            alert("Admin mode activated. You can now remove users.");
+        } else alert("Invalid key");
     }
     
     async function createPermanentUsername(rawUsername) {
@@ -608,7 +569,12 @@
         const lowerKey = finalUsername.toLowerCase();
         const usernameRef = ref(db, `usernames/${lowerKey}`);
         const snap = await get(usernameRef);
-        if (snap.exists()) { setUsernameError("🚫 Username already taken!"); return false; }
+        if (snap.exists()) { 
+            // If exists but our device id mismatch? might be removed by admin? 
+            // But if exists and device is different => occupied
+            if(snap.val().deviceId !== deviceId) { setUsernameError("🚫 Username already taken!"); return false; }
+            else { return await validateAndActivateUsername(finalUsername); } // re-activate
+        }
         const deviceBindingRef = ref(db, `deviceBindings/${deviceId}`);
         const deviceSnap = await get(deviceBindingRef);
         if (deviceSnap.exists() && deviceSnap.val().username !== finalUsername) {
@@ -626,149 +592,66 @@
         return true;
     }
     
-    // --- Global game variables and fullscreen game logic ---
-    let ADMIN_SETTINGS = { gameDuration: 15, showLimit: 200, winAmount: 10, milestones: {100:{wins:10,price:50},250:{wins:20,price:150},500:{wins:40,price:300}}, openTime: "00:00", closeTime: "23:59" };
-    
-    function initAppAfterAuth(username) {
-        document.getElementById('myUID').innerText = username;
-        // Setup fullscreen game trigger
-        const startBtn = document.getElementById('startFullGameBtn');
-        startBtn.onclick = () => openFullscreenGame(username);
-        initDataSync(username);
-        setInterval(checkAppStatus, 3000);
-        checkAppStatus();
-    }
-    
+    // Fullscreen game (same as original)
     async function openFullscreenGame(username) {
-        // Check session open/close
         const now = new Date();
         const timeStr = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
         if (timeStr < ADMIN_SETTINGS.openTime || timeStr > ADMIN_SETTINGS.closeTime) {
             alert("⛔ GAME SESSION CLOSED! Come back during open hours.");
             return;
         }
-        
-        // Fetch current highest score
         const scoreSnap = await get(ref(db, `leaderboard/${username.toLowerCase()}`));
         let highScore = (scoreSnap.val() && scoreSnap.val().score) ? scoreSnap.val().score : 0;
-        
-        // Create fullscreen overlay
         const gameDiv = document.createElement('div');
         gameDiv.className = 'game-fullscreen';
         gameDiv.innerHTML = `
             <div class="game-card">
                 <h2 style="color:#fbbf24;"><i class="fas fa-apple-alt"></i> APPLE SLASHER 🍎</h2>
-                <div class="stat-row">
+                <div style="display:flex; justify-content:space-between;">
                     <div class="stat-box"><small>🏆 HIGH SCORE</small><div id="fullHighScore">${highScore}</div></div>
                     <div class="stat-box"><small>🔥 CURRENT</small><div id="fullCurrentScore">0</div></div>
                 </div>
-                <div style="position:relative; display:flex; justify-content:center;">
-                    <div class="apple-big" id="fullApple">🍎</div>
-                </div>
-                <div id="fullTimer" style="font-size: 1.8rem; font-weight:800; margin:10px 0;">⏱️ ${ADMIN_SETTINGS.gameDuration}s</div>
+                <div class="apple-big" id="fullApple">🍎</div>
+                <div id="fullTimer" style="font-size: 1.8rem; font-weight:800;">⏱️ ${ADMIN_SETTINGS.gameDuration}s</div>
                 <button id="fullSlashBtn" class="btn-premium"><i class="fas fa-hand-peace"></i> START </button>
                 <button id="exitFullGame" class="close-game-btn"><i class="fas fa-sign-out-alt"></i> EXIT </button>
             </div>
         `;
         document.body.appendChild(gameDiv);
         document.body.style.overflow = 'hidden';
-        
-        let currentClicks = 0;
-        let isPlaying = false;
-        let timerInterval = null;
+        let currentClicks = 0, isPlaying = false, timerInterval = null;
         const appleDiv = gameDiv.querySelector('#fullApple');
         const timerDiv = gameDiv.querySelector('#fullTimer');
         const currentScoreDiv = gameDiv.querySelector('#fullCurrentScore');
         const startButton = gameDiv.querySelector('#fullSlashBtn');
         const exitBtn = gameDiv.querySelector('#exitFullGame');
-        
-        // Slash effect + particles
-        function createSplashEffect(x, y, containerRect) {
-            const particleContainer = gameDiv.querySelector('.game-card');
-            for(let i=0;i<12;i++) {
-                const p = document.createElement('div');
-                p.className = 'particle';
-                const angle = Math.random() * Math.PI * 2;
-                const dist = 15 + Math.random() * 40;
-                const px = Math.cos(angle) * dist;
-                const py = Math.sin(angle) * dist;
-                p.style.setProperty('--px', px + 'px');
-                p.style.setProperty('--py', py + 'px');
-                p.style.left = (x - 6) + 'px';
-                p.style.top = (y - 6) + 'px';
-                p.style.position = 'absolute';
-                particleContainer.appendChild(p);
-                setTimeout(() => p.remove(), 400);
-            }
-        }
-        
-        const handleSlash = (e) => {
-            if (!isPlaying) return;
-            currentClicks++;
-            currentScoreDiv.innerText = currentClicks;
-            appleDiv.style.transform = 'scale(0.92)';
-            setTimeout(() => appleDiv.style.transform = '', 90);
-            // Add visual slash line
-            const slashLine = document.createElement('div');
-            slashLine.className = 'slash-line';
-            const angle = Math.random() * 360;
-            slashLine.style.setProperty('--angle', `${angle}deg`);
-            const rect = appleDiv.getBoundingClientRect();
-            const centerX = rect.left + rect.width/2;
-            const centerY = rect.top + rect.height/2;
-            slashLine.style.left = `${centerX - 100}px`;
-            slashLine.style.top = `${centerY - 3}px`;
-            gameDiv.appendChild(slashLine);
-            setTimeout(() => slashLine.remove(), 150);
-            createSplashEffect(rect.left + rect.width/2 - (gameDiv.querySelector('.game-card').getBoundingClientRect().left), rect.top + rect.height/2 - (gameDiv.querySelector('.game-card').getBoundingClientRect().top), gameDiv.querySelector('.game-card').getBoundingClientRect());
-        };
-        
+        const handleSlash = () => { if(isPlaying) { currentClicks++; currentScoreDiv.innerText = currentClicks; appleDiv.style.transform = 'scale(0.92)'; setTimeout(() => appleDiv.style.transform = '', 90); } };
         appleDiv.addEventListener('click', handleSlash);
-        
         startButton.onclick = async () => {
             if (isPlaying) return;
-            currentClicks = 0;
-            currentScoreDiv.innerText = "0";
+            currentClicks = 0; currentScoreDiv.innerText = "0";
             isPlaying = true;
             let timeLeft = ADMIN_SETTINGS.gameDuration;
             timerDiv.innerText = `⏱️ ${timeLeft}s`;
             startButton.disabled = true;
-            startButton.innerHTML = '<i class="fas fa-fist-raised"></i> SLASH NOW!';
             if(timerInterval) clearInterval(timerInterval);
             timerInterval = setInterval(() => {
                 timeLeft--;
                 timerDiv.innerText = `⏱️ ${timeLeft}s`;
                 if(timeLeft <= 0) {
-                    clearInterval(timerInterval);
-                    isPlaying = false;
-                    startButton.disabled = false;
-                    startButton.innerHTML = '<i class="fas fa-play"></i> PLAY AGAIN';
+                    clearInterval(timerInterval); isPlaying = false; startButton.disabled = false; startButton.innerHTML = '<i class="fas fa-play"></i> PLAY AGAIN';
                     saveGameScore(username, currentClicks);
-                    // Refresh highscore display
-                    get(ref(db, `leaderboard/${username.toLowerCase()}`)).then(snap => {
-                        if(snap.val()) document.getElementById('fullHighScore').innerText = snap.val().score || currentClicks;
-                        document.getElementById('myBest').innerText = snap.val()?.score || currentClicks;
-                    });
+                    get(ref(db, `leaderboard/${username.toLowerCase()}`)).then(snap => { if(snap.val()) document.getElementById('fullHighScore').innerText = snap.val().score; document.getElementById('myBest').innerText = snap.val()?.score || 0; });
                 }
             }, 1000);
         };
-        
         async function saveGameScore(uid, scoreVal) {
             const scoreRef = ref(db, `leaderboard/${uid.toLowerCase()}`);
             const snap = await get(scoreRef);
             const best = (snap.val() && snap.val().score) ? snap.val().score : 0;
-            if (scoreVal > best) {
-                await set(scoreRef, { uid: uid, score: scoreVal });
-                const logRef = ref(db, `userLogs/${uid}`);
-                await set(logRef, { uid, score: scoreVal, duration: ADMIN_SETTINGS.gameDuration, timestamp: new Date().toLocaleString() });
-            }
+            if (scoreVal > best) await set(scoreRef, { uid: uid, score: scoreVal });
         }
-        
-        exitBtn.onclick = () => {
-            if(timerInterval) clearInterval(timerInterval);
-            gameDiv.remove();
-            document.body.style.overflow = '';
-        };
+        exitBtn.onclick = () => { if(timerInterval) clearInterval(timerInterval); gameDiv.remove(); document.body.style.overflow = ''; };
     }
     
     function updateMilestonesUI(userCount) {
@@ -780,103 +663,67 @@
         Object.keys(ms).sort((a,b)=>Number(a)-Number(b)).forEach(target => {
             const reached = userCount >= parseInt(target);
             if(reached) currentUnlocked = ms[target].wins;
-            body.innerHTML += `<tr style="background:${reached ? '#0f2b1f30' : 'transparent'};">
-                <td style="font-weight:bold;"> ${target} users ${reached ? '✅️' : ''} </td>
-                <td> ${ms[target].wins} winners </td>
-                <td> ₹${ms[target].price} </td>
-             </tr>`;
+            body.innerHTML += `<tr style="background:${reached ? '#0f2b1f30' : 'transparent'}"><td> ${target} users ${reached ? '✅' : ''} </td><td> ${ms[target].wins} winners </td><td> ₹${ms[target].price} </td></tr>`;
         });
-        const statusDiv = document.getElementById('currentStatus');
-        if(statusDiv) statusDiv.innerHTML = `<i class="fas fa-crown"></i> ${currentUnlocked} Winners Unlocked <i class="fas fa-gem"></i>`;
+        document.getElementById('currentStatus').innerHTML = `<i class="fas fa-crown"></i> ${currentUnlocked} Winners Unlocked <i class="fas fa-gem"></i>`;
         return currentUnlocked;
     }
     
-    function initDataSync(currentUsername) {
-        onValue(ref(db, 'settings'), (snap) => {
-            const data = snap.val() || {};
-            ADMIN_SETTINGS = {...ADMIN_SETTINGS, ...data};
-            if(document.getElementById('openTimeText')) document.getElementById('openTimeText').innerText = data.openTime || "00:00";
-            if(document.getElementById('closeTimeText')) document.getElementById('closeTimeText').innerText = data.closeTime || "23:59";
-            checkAppStatus();
+    function attachGiftCopyHandler(container) {
+        container.querySelectorAll('.gift-card').forEach(card => {
+            card.addEventListener('click', async (e) => {
+                let codeSpan = card.querySelector('.copy-code-text');
+                if(codeSpan) { let code = codeSpan.getAttribute('data-code') || codeSpan.innerText.trim(); await navigator.clipboard.writeText(code); showCopyToast(`🎁 "${code}" copied!`); }
+            });
         });
-        
+    }
+    function showCopyToast(msg) { let toast = document.createElement('div'); toast.className = 'copy-toast'; toast.innerHTML = `<i class="fas fa-copy"></i> ${msg}`; document.body.appendChild(toast); setTimeout(() => toast.remove(), 1500); }
+    
+    function initDataSync(currentUsername) {
+        onValue(ref(db, 'settings'), (snap) => { ADMIN_SETTINGS = {...ADMIN_SETTINGS, ...snap.val()}; document.getElementById('openTimeText').innerText = ADMIN_SETTINGS.openTime || "00:00"; document.getElementById('closeTimeText').innerText = ADMIN_SETTINGS.closeTime || "23:59"; checkAppStatus(); });
         onValue(ref(db, 'leaderboard'), async (snap) => {
             const data = snap.val() || {};
-            const users = Object.values(data).sort((a,b) => b.score - a.score);
+            const users = Object.values(data).sort((a,b)=>b.score - a.score);
             const totalUsers = users.length;
-            if(document.getElementById('totalUserCount')) document.getElementById('totalUserCount').innerText = totalUsers;
+            document.getElementById('totalUserCount').innerText = totalUsers;
             const winnersLimit = updateMilestonesUI(totalUsers);
             const listDiv = document.getElementById('leaderList');
             if(listDiv) {
                 listDiv.innerHTML = '';
                 users.slice(0, ADMIN_SETTINGS.showLimit || 200).forEach((u, idx) => {
-                    const rank = idx+1;
-                    const isWinner = rank <= winnersLimit;
+                    const rank = idx+1; const isWinner = rank <= winnersLimit;
                     const highlight = u.uid === currentUsername ? 'style="background: linear-gradient(95deg,#fbbf2420,#2a1e0a); border-left:4px solid #fbbf24;"' : '';
-                    listDiv.innerHTML += `<div class="leader-item" ${highlight}>
-                        <div style="display:flex; justify-content:space-between;">
-                            <span><strong>#${rank}</strong> ${u.uid === currentUsername ? '🔥 YOU' : u.uid.slice(0,14)}</span>
-                            <span><span class="prize-tag ${isWinner ? 'tag-win' : 'tag-lock'}">${isWinner ? '₹'+ADMIN_SETTINGS.winAmount : 'locked'}</span> <span style="color:#4ade80;">${u.score}</span></span>
-                        </div>
-                    </div>`;
+                    listDiv.innerHTML += `<div class="leader-item" ${highlight}><div style="display:flex; justify-content:space-between;"><span><strong>#${rank}</strong> ${u.uid === currentUsername ? '🔥 YOU' : u.uid.slice(0,14)}</span><span><span class="prize-tag ${isWinner ? 'tag-win' : 'tag-lock'}">${isWinner ? '₹'+ADMIN_SETTINGS.winAmount : 'locked'}</span> <span style="color:#4ade80;">${u.score}</span></span></div></div>`;
                     if(u.uid === currentUsername && document.getElementById('myBest')) document.getElementById('myBest').innerText = u.score;
                 });
             }
         });
-        
         onValue(ref(db, `gifts/${currentUsername}`), (snap) => {
-            const gifts = snap.val();
-            const container = document.getElementById('giftContainer');
-            if(!container) return;
-            if(!gifts || Object.keys(gifts).length === 0) { 
-                container.innerHTML = "<div style='padding:24px; text-align:center; background:#0a0f1e; border-radius:30px;'><i class='fas fa-inbox'></i> No rewards yet.<br><small>Win rank prizes after session ends</small></div>"; 
-                return; 
-            }
-            container.innerHTML = Object.values(gifts).map(g => `
-                <div class="gift-card" data-code="${g.code}">
-                    <i class="fas fa-ticket-alt"></i>
-                    <div>🎁 REWARD ₹${g.amount}</div>
-                    <div class="code-block"><span class="copy-code-text" data-code="${g.code}">${g.code}</span> <i class="fas fa-copy"></i></div>
-                    <div class="click-hint">Click card → copy code</div>
-                </div>
-            `).join('');
+            const gifts = snap.val(); const container = document.getElementById('giftContainer');
+            if(!gifts || Object.keys(gifts).length === 0) { container.innerHTML = "<div style='padding:24px;text-align:center;background:#0a0f1e;border-radius:30px;'>No rewards yet.</div>"; return; }
+            container.innerHTML = Object.values(gifts).map(g => `<div class="gift-card" data-code="${g.code}"><i class="fas fa-ticket-alt"></i><div>🎁 REWARD ₹${g.amount}</div><div class="code-block"><span class="copy-code-text" data-code="${g.code}">${g.code}</span> <i class="fas fa-copy"></i></div></div>`).join('');
             attachGiftCopyHandler(container);
         });
     }
     
-    function attachGiftCopyHandler(container) {
-        container.querySelectorAll('.gift-card').forEach(card => {
-            card.removeEventListener('click', giftClickHandler);
-            card.addEventListener('click', giftClickHandler);
-        });
-    }
-    async function giftClickHandler(e) {
-        let card = e.currentTarget;
-        let codeSpan = card.querySelector('.copy-code-text');
-        if(!codeSpan) return;
-        let code = codeSpan.getAttribute('data-code') || codeSpan.innerText.trim();
-        try {
-            await navigator.clipboard.writeText(code);
-            showCopyToast(`🎁 "${code}" copied!`);
-        } catch { alert("Copy manually: " + code); }
-    }
-    function showCopyToast(msg) {
-        let toast = document.createElement('div');
-        toast.className = 'copy-toast';
-        toast.innerHTML = `<i class="fas fa-copy"></i> ${msg}`;
-        document.body.appendChild(toast);
-        setTimeout(() => toast.remove(), 1500);
-    }
-    
     function checkAppStatus() {
-        const now = new Date();
-        const timeStr = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
+        const now = new Date(); const timeStr = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
         const closed = timeStr < ADMIN_SETTINGS.openTime || timeStr > ADMIN_SETTINGS.closeTime;
-        const banner = document.getElementById('statusBanner');
-        if(banner) banner.style.display = closed ? 'flex' : 'none';
+        document.getElementById('statusBanner').style.display = closed ? 'flex' : 'none';
         const startBtn = document.getElementById('startFullGameBtn');
         if(startBtn && closed) { startBtn.disabled = true; startBtn.innerHTML = '<i class="fas fa-ban"></i> SESSION CLOSED'; }
         else if(startBtn && !closed && startBtn.disabled) { startBtn.disabled = false; startBtn.innerHTML = '<i class="fas fa-play"></i> START GAME (FULLSCREEN)'; }
+    }
+    
+    function initAppAfterAuth(username) {
+        document.getElementById('myUID').innerText = username;
+        document.getElementById('startFullGameBtn').onclick = () => openFullscreenGame(username);
+        initDataSync(username);
+        setInterval(checkAppStatus, 3000);
+        checkAppStatus();
+        // Add admin trigger (long press on play header)
+        const playHeader = document.querySelector('#sec-click .card h3');
+        if(playHeader) playHeader.ondblclick = () => promptAdminLogin();
     }
     
     window.showTab = (id, el) => {
@@ -889,14 +736,19 @@
     (async function bootstrap() {
         const hasUser = await checkExistingUsername();
         if(!hasUser) {
-            await showDeviceSuggestion();
-            document.getElementById('createUsernameBtn').onclick = async () => {
-                const val = document.getElementById('newUsernameInput').value;
-                if(!val) setUsernameError("Enter a username!");
-                else await createPermanentUsername(val);
-            };
+            const boundDeviceName = await fetchDeviceBoundUsername();
+            if(boundDeviceName) {
+                const suggestionBox = document.getElementById('suggestionBox');
+                suggestionBox.style.display = 'block';
+                suggestionBox.innerHTML = `<div class="suggestion-card" id="suggestionLoginBtn"><div class="suggestion-label"><i class="fas fa-mobile-alt"></i> 🔄 DEVICE DETECTED</div><div class="suggestion-name">${boundDeviceName}</div><div style="font-size:11px;">Click to login</div></div>`;
+                document.getElementById('suggestionLoginBtn').onclick = async () => { if(await validateAndActivateUsername(boundDeviceName)) { document.getElementById('usernameScreen').style.display = 'none'; initAppAfterAuth(CURRENT_USERNAME); } else setUsernameError("Recover failed"); };
+            }
+            document.getElementById('createUsernameBtn').onclick = async () => { const val = document.getElementById('newUsernameInput').value; if(val) await createPermanentUsername(val); else setUsernameError("Enter username"); };
         }
+        window.adminRemoveUserGlobal = adminRemoveUser;
+        document.getElementById('adminRemoveUserBtn').addEventListener('click', () => { const name = document.getElementById('adminRemoveUsername').value; if(name) adminRemoveUser(name); else alert("Enter username"); });
+        document.getElementById('adminRefreshListBtn').addEventListener('click', loadAllUsersForAdmin);
     })();
 </script>
 </body>
-          </html>
+</html>
